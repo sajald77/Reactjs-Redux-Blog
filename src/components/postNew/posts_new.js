@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Input } from 'reactstrap';
 import {connect} from 'react-redux'
-import {createPost} from '../actions/index';
+import {createPost} from '../../actions/index';
 
 class PostsNew extends Component {
 

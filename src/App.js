@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom';
-import PostIndex from './components/posts_index';
-import PostsNew from './components/posts_new';
-import PostsDetail from './components/posts_detail';
+import PostIndex from './components/postIndex/posts_index';
+import PostsNew from './components/postNew/posts_new';
+import PostsDetail from './components/postDetail/posts_detail';
 
-class App extends Component {
-  render() {
-    return (
+const App = () =>  (
       <div className="App">
 
         <div className="display-1 text-center text-black-50 mb-4">
@@ -41,7 +39,5 @@ class App extends Component {
 
       </div>
     );
-  }
-}
 
 export default App;

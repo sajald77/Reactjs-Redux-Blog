@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect } from 'react-redux';
-import {fetchPost,deletePost,fetchComments,deleteComment,addComment } from '../actions/index';
+import {fetchPost,deletePost,fetchComments,deleteComment,addComment } from '../../actions/index';
 import { Button, Input } from 'reactstrap';
 
 class PostsDetail extends Component {
@@ -9,7 +9,8 @@ class PostsDetail extends Component {
         super(props);
 
         this.state = {
-            body: ''
+            body: '',
+            postId:this.props.match.params.id
         }  
     }
 
@@ -79,6 +80,8 @@ class PostsDetail extends Component {
         )
     }
 }
+
+export {PostsDetail}
 
 function mapStateToProps(state) {
     return {post:state.posts.post,
