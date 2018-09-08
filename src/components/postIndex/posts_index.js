@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom';
 import {fetchPosts} from '../../actions/index';
 
@@ -42,6 +43,8 @@ class PostsIndex extends Component {
         );
     }
 }
+
+
 
 function mapStateToProps(state) {
     return {posts: state.posts.all};

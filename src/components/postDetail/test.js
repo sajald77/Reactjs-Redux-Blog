@@ -25,15 +25,7 @@ describe('PostsDetails component', () => {
 
       it('Should render successfully', () => {
         console.log("dsafadsfa")
-        component = shallow(
-            <PostsDetails 
-            match={{params:{id:1}}} 
-            post={[object]} 
-            fetchPosts={fetchMock} 
-            fetchComments={fetchcomments} 
-            deleteComment={deletecomment}
-            deletePost={deltePost}/>,
-        );
+
         expect(component.exists()).toEqual(true);
       });
 

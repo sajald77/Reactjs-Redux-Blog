@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import {fetchPost,deletePost,fetchComments,deleteComment,addComment } from '../../actions/index';
 import { Button, Input } from 'reactstrap';
 
@@ -79,6 +80,14 @@ class PostsDetail extends Component {
         </div>
         )
     }
+}
+
+
+PostsDetail.PropTypes={
+    fetchPost: PropTypes.func.isRequired,
+    fetchComments: PropTypes.func.isRequired,
+    deletePost: PropTypes.func.isRequired,
+
 }
 
 export {PostsDetail}
