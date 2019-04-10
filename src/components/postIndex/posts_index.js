@@ -20,7 +20,7 @@ class PostsIndex extends Component {
                 <h1>Posts</h1>
             </div>
 
-            {this.props.posts.map((post) => {
+            {this.props.posts && this.props.posts.map((post) => {
                 return (
                         <div key={post.id} className="container my-3 mx-5 postid" >
                             <Link to={`/${post.id}`} className="clickpost"
